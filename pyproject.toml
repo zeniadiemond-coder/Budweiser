@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trainv6"
+version = "1.2"
+requires-python = ">=3.13"
+dependencies = ["torch", "numpy", "scipy", "soundfile", "pyworld"]
+
+[tool.setuptools]
+packages = ["trainv6", "trainv6.reference"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
